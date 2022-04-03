@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %} About {% endblock %} 
+
+{% block heading %}
+About Us:
+{% endblock %}
+
+{% block content %}
+    <p style="padding:10px; font-size: medium;">
+        We are a non-profit organization working as an animal rescue.
+        We aim to help you connect with purrfect furbaby for you!
+        The animals you find at our website are rescued and rehabilitated animals.
+        Our mission is to promote the ideology of "Adopt, don't Shop"!
+    </p>
+    {% for pet in pets %}
+     <img src= "{{url_for('static', filename = pet.id|string+'.jpg')}}">
+     {% endfor %}
+{% endblock %}
