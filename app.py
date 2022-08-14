@@ -56,7 +56,7 @@ finally:
 def homepage():
     """View function for Home Page."""
     pets = Pet.query.all()
-    return render_template("index.html", pets = pets)
+    return render_template("home.html", pets = pets)
 
 
 @app.route("/about")
